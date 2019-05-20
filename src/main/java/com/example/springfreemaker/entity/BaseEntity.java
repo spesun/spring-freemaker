@@ -1,5 +1,7 @@
 package com.example.springfreemaker.entity;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -16,7 +18,9 @@ public class BaseEntity implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
+
     @Column(name = "name")
+    @ApiModelProperty("用户名")
     protected String name;
 
     public Long getId() {

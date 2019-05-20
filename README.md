@@ -1,4 +1,4 @@
-# 测试spring boot、freemaker、jpa、layui
+# 测试spring boot、freemaker、jpa、layui、swagger等
 访问链接为/register、/login
 # 参考
 [SpringBoot————快速整合Hibernate框架](https://blog.csdn.net/u014745069/article/details/79940540#commentBox)

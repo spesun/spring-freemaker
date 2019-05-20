@@ -2,6 +2,7 @@ package com.example.springfreemaker;
 
 import com.alibaba.fastjson.JSON;
 import com.example.springfreemaker.entity.User;
+import com.example.springfreemaker.model.SwaggerResultData;
 import org.json.JSONObject;
 import org.junit.Test;
 import org.springframework.web.client.RestTemplate;
@@ -16,7 +17,7 @@ public class UserTest {
     @Test
     public void save() {
         User user = new User();
-        user.setName("11111111");
+        user.setName(name);
         user.setPassword("11111111");
 
         String str = restTemplate.postForObject(url + "/user/save", user, String.class);
@@ -39,10 +40,10 @@ public class UserTest {
 
     @Test
     public void findName() {
-        List users = restTemplate.getForObject(url + "/user/findName?name=" + name,  List.class);
-        System.out.println(JSON.toJSONString(users));
+        SwaggerResultData swaggerResultData = restTemplate.getForObject(url + "/user/findName?name=" + name,  SwaggerResultData.class);
+        System.out.println(JSON.toJSONString(swaggerResultData));
 
-             users = restTemplate.getForObject(url + "/user/findNameNative?name=" + name,  List.class);
+        List     users = restTemplate.getForObject(url + "/user/findNameNative?name=" + name,  List.class);
         System.out.println(JSON.toJSONString(users));
 
         //findByName只要有接口就行了，不需要自己实现
