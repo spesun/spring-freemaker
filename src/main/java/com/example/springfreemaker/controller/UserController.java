@@ -37,6 +37,12 @@ public class UserController {
         return userRepository.findById(id).get();
     }
 
+    @ApiOperation("批量查询")
+    @GetMapping("/selectList")
+    public SwaggerResultData<List<User>> selectList() {
+        return SwaggerResultData.createSuccess(userRepository.findAll());
+    }
+
 
     @ApiOperation("根据名称查询")
     @ApiImplicitParam(paramType="query", name = "name", value = "用户名", required = true, dataType = "String")
