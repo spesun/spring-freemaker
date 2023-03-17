@@ -84,6 +84,11 @@
             <artifactId>mockito-core</artifactId>
             <version>2.28.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
 	<build>

@@ -24,6 +24,11 @@ public class HomeController {
         return "index";
     }
 
+    @RequestMapping(value = "/deferred")
+    public String deferred(){
+        return "deferred";
+    }
+
   /*  @RequestMapping(value = "/welcome")
     public ModelAndView home(){
         ModelAndView modelAndView = new ModelAndView();
